@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\Adeoy3 Pc\IdeaProjects\React-Native-Projects\hotel\node_modules\.staging\@react-native-community'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Adeoy3 Pc\IdeaProjects\React-Native-Projects\hotel\node_modules\@babel\plugin-transform-runtime\node_modules\.bin'
 
 npm manifest: 
   {
@@ -30,22 +30,23 @@ npm manifest:
       "react": "~16.9.0",
       "react-dom": "~16.9.0",
       "react-native": "~0.61.4",
+      "react-native-elements": "^1.2.7",
       "react-native-gesture-handler": "~1.5.0",
+      "react-native-image-slider-show": "^1.0.3",
       "react-native-reanimated": "~1.4.0",
       "react-native-screens": "~2.0.0-alpha.12",
       "react-native-unimodules": "~0.7.0",
-      "react-native-web": "~0.11.7",
-      "react-native-elements": "^1.2.7",
-      "react-native-vector-icons": "^6.6.0"
+      "react-native-vector-icons": "^6.6.0",
+      "react-native-web": "~0.11.7"
     },
     "devDependencies": {
       "@babel/core": "^7.0.0",
       "babel-jest": "~24.9.0",
+      "babel-preset-expo": "~8.0.0",
       "jest": "~24.9.0",
       "jetifier": "~1.6.4",
       "metro-react-native-babel-preset": "~0.56.0",
-      "react-test-renderer": "~16.9.0",
-      "babel-preset-expo": "~8.0.0"
+      "react-test-renderer": "~16.9.0"
     },
     "private": true
   }
@@ -5329,6 +5330,11 @@ Lockfile:
       hoist-non-react-statics "^2.3.1"
       invariant "^2.2.4"
       prop-types "^15.7.2"
+  
+  react-native-image-slider-show@^1.0.3:
+    version "1.0.3"
+    resolved "https://registry.yarnpkg.com/react-native-image-slider-show/-/react-native-image-slider-show-1.0.3.tgz#4df4c0ba520074f7a5513cca9a83ea48ac8868a5"
+    integrity sha512-9Tysqt4Q1I2OIYN1hJ+291Axy9JwsKFpr1a4uxu9uDMLGgkYsOLhbsMdgj7qVBmtLWZDQ9Kr45r+LNIRmmSvGg==
   
   react-native-ratings@^6.3.0:
     version "6.5.0"
