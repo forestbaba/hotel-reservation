@@ -48,51 +48,66 @@ class ExplorePage extends Component {
 
     render() {
         return (
-            <View style={styles.explore}>
-                <Slideshow
-                    dataSource={this.state.dataSource}
-                    position={this.state.position}
-                    height={500}
-                    onPositionChanged={position => this.setState({ position })} />
-                {/* <ImageBackground source={imagecover} style={styles.imageCover}> */}
-                <View style={styles.topcontainer}>
+            <ScrollView>
+                <View style={styles.explore}>
+                    <Slideshow
+                        dataSource={this.state.dataSource}
+                        position={this.state.position}
+                        height={500}
+                        onPositionChanged={position => this.setState({ position })} />
+                    {/* <ImageBackground source={imagecover} style={styles.imageCover}> */}
+                    <View style={styles.topcontainer}>
 
-                    <View style={styles.searchcontainer}>
-                        <Searchbar placeholder={'...Search'}
-                            elevation={15} margin={20}
-                            isicon iconname={'search'}
-                            iconcolor={'#61cec7'}
-                        />
+                        <View style={styles.searchcontainer}>
+                            <Searchbar placeholder={'...Search'}
+                                elevation={15} margin={20}
+                                isicon iconname={'search'}
+                                iconcolor={'#61cec7'}
+                            />
+                        </View>
+                        <View style={styles.calltoaction}>
+                            <Text style={styles.calltoactiontitle}>Cape Town</Text>
+                            <Text style={styles.calltoactiondesc}>The short and little explanationabout cape town</Text>
+                            <Roundcornerbutton title={'Explore'}
+                                colorr={'#61cec7'}
+                                margin={20}
+                                textcolor={'white'}
+                                parentWidth={'50%'}
+                            />
+                        </View>
                     </View>
-                    <View style={styles.calltoaction}>
-                        <Text style={styles.calltoactiontitle}>Cape Town</Text>
-                        <Text style={styles.calltoactiondesc}>The short and little explanationabout cape town</Text>
-                        <Roundcornerbutton title={'Explore'}
-                            colorr={'#61cec7'}
-                            margin={20}
-                            textcolor={'white'}
-                            parentWidth={'50%'}
-                        />
+
+                    {/* </ImageBackground> */}
+
+                    <View style={styles.bottomcontainer}>
+                        <Text style={styles.peopledestination}>People Destinations</Text>
+                        <ScrollView horizontal>
+
+                            <ImageBackgroundCard imagecover={imagecover} borderRadius={15} text={'The right place to be'} />
+                            <ImageBackgroundCard imagecover={imagecover2} borderRadius={15} text={'The right place to be'} />
+                            <ImageBackgroundCard imagecover={imagecover} borderRadius={15} text={'The right place to be'} />
+                            <ImageBackgroundCard imagecover={imagecover2} borderRadius={15} text={'The right place to be'} />
+                            <ImageBackgroundCard imagecover={imagecover} borderRadius={15} text={'The right place to be'} />
+
+                        </ScrollView>
+
                     </View>
-                </View>
+                    <View style={styles.bottomcontainer}>
+                        <Text style={styles.peopledestination}>Last Searches</Text>
+                        <ScrollView horizontal>
 
-                {/* </ImageBackground> */}
+                            <ImageBackgroundCard imagecover={imagecover} borderRadius={15} text={'The right place to be'} />
+                            <ImageBackgroundCard imagecover={imagecover2} borderRadius={15} text={'The right place to be'} />
+                            <ImageBackgroundCard imagecover={imagecover} borderRadius={15} text={'The right place to be'} />
+                            <ImageBackgroundCard imagecover={imagecover2} borderRadius={15} text={'The right place to be'} />
+                            <ImageBackgroundCard imagecover={imagecover} borderRadius={15} text={'The right place to be'} />
 
-                <View style={styles.bottomcontainer}>
-                    <Text style={styles.peopledestination}>People Destinations</Text>
-                    <ScrollView horizontal>
+                        </ScrollView>
 
-                        <ImageBackgroundCard imagecover={imagecover} borderRadius={15} text={'The right place to be'} />
-                        <ImageBackgroundCard imagecover={imagecover2} borderRadius={15} text={'The right place to be'} />
-                        <ImageBackgroundCard imagecover={imagecover} borderRadius={15} text={'The right place to be'} />
-                        <ImageBackgroundCard imagecover={imagecover2} borderRadius={15} text={'The right place to be'} />
-                        <ImageBackgroundCard imagecover={imagecover} borderRadius={15} text={'The right place to be'} />
-
-                    </ScrollView>
+                    </View>
 
                 </View>
-
-            </View>
+            </ScrollView>
         )
     }
 }
@@ -165,11 +180,11 @@ const styles = StyleSheet.create({
     calltoactiontitle: {
         fontWeight: 'bold',
         fontSize: 30,
-        color:'white'
+        color: 'white'
     },
     calltoactiondesc: {
         color: 'white',
-        fontSize:14
+        fontSize: 14
     }
 })
 export default ExplorePage;
