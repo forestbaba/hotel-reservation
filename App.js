@@ -7,6 +7,8 @@ import SingupPage from './src/screens/signup/Signup.page'
 import Explore from './src/screens/explore/explore.page'
 import Profile from './src/screens/profile/profile'
 import SelectedHotel from './src/screens/selectedhotel/selectedhotel.page'
+import ForgotPassword from './src/screens/forgotpassword/forgotpass.page'
+import Reviewspage from './src/screens/reviews/reviews.page'
 const App =() => (
   <View style={styles.container}>
     {/* <CarouselPage/> */}
@@ -15,7 +17,9 @@ const App =() => (
     {/* <SingupPage/> */}
     {/* <Explore/> */}
     {/* <Profile/> */}
-    <SelectedHotel/>
+    {/* <SelectedHotel/> */}
+    {/* <ForgotPassword/> */}
+    <Reviewspage/>
     </View>
   );
 
