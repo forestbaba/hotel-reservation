@@ -14,7 +14,7 @@ class Reviewspage extends Component {
     render() {
         return (
             <View style={styles.reviewpage}>
-                <ReviewTitle count={20}/>
+                <ReviewTitle count={20} actiontitle={'Write a review'}/>
                 <ScrollView >
                     {
                         this.state.names.map((name, index) => (

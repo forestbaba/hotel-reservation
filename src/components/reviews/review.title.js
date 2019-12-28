@@ -13,7 +13,7 @@ class ReviewTitle extends React.Component {
                 <View style={styles.reviewtitleholder}>
                     <Text style={styles.title}>Reviews ( {this.props.count} )</Text>
                     <TouchableOpacity>
-                        <Text style={styles.writeareview}>Write a review</Text>
+                        <Text style={styles.writeareview}>{this.props.actiontitle}</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.divider} />
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-end',
         marginRight:40
     },
+    
     divider: {
         borderBottomColor: 'black',
         borderBottomWidth: 0.5,

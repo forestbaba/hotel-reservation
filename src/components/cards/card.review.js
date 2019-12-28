@@ -19,7 +19,6 @@ class CardView extends React.Component {
                             <Text>Last updated 21, May, 2005</Text>
                         </View>
                     </View>
-
                     <View style={styles.ratingholder}>
                         <Text style={styles.ratingdesc}>Very good</Text>
                         <Rating
