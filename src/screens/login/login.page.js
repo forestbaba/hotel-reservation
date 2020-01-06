@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-nati
 import Roundedgebutton from '../../components/button/Round.edge.button'
 import Roundedgeinput from '../../components/button/Round.edge.textinput'
 
-const LoginPage = () =>
+const LoginPage = ({navigation}) =>
     (
         <View style={styles.loginpage}>
             
@@ -15,7 +15,8 @@ const LoginPage = () =>
                     parentWidth={'40%'}
                     mRight={20} mLeft={20}
                     iconColor={'#FFFFFF'}
-                    iconname={'facebook'} />
+                    iconname={'facebook'}
+                   />
 
 
                 <Roundedgebutton
@@ -40,6 +41,7 @@ const LoginPage = () =>
                     margin={20}
                     textcolor={'white'}
                     parentWidth={'100%'}
+                    onPress={() => navigation.navigate('Container')}
                 />
 
             </View>

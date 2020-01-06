@@ -7,7 +7,7 @@ import {
     Dimensions,
     ImageBackground
 } from 'react-native';
-import Carousel from 'react-native-anchor-carousel';
+// import Carousel from 'react-native-anchor-carousel';
 
 const { width } = Dimensions.get('window');
 
@@ -58,19 +58,9 @@ export default class ImageCarousel extends Component {
 
     render() {
         return (
-            <Carousel
-                style={styles.carousel}
-                data={data}
-                renderItem={this.renderItem}
-                itemWidth={0.7 * width}
-                inActiveOpacity={0.3}
-                containerWidth={width - 10}
-                indicatorAtBottom={true} 
-                inactiveIndicatorText='•'
-                ref={(c) => {
-                    this.numberCarousel = c;
-                }}
-            />
+            <View style={styles.carousel}>
+                <Text>Hobcbnsbnb anb bhdhb amvme</Text>
+            </View>
         );
     }
 }
@@ -110,11 +100,11 @@ const styles = StyleSheet.create({
     },
     titleText: {
         fontWeight: 'bold',
-        textAlign:'center',
+        textAlign: 'center',
         fontSize: 30
     },
     contentText: {
         fontSize: 12,
-        textAlign:'center'
+        textAlign: 'center'
     }
 });

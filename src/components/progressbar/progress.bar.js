@@ -15,9 +15,7 @@ const Progressanddesc = ({description}) => (
                     // backgroundColorOnComplete="#6CC644"
                 />
             </View>
-
         </View>
-
     </View>
 )
 

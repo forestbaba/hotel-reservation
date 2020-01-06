@@ -1,7 +1,8 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import Slideshow from 'react-native-image-slider-show';
 import Roundcornerbutton from '../button/Round.edge.button'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 class SelectedHotelRoom extends React.Component {
     constructor() {
@@ -42,7 +43,7 @@ class SelectedHotelRoom extends React.Component {
                         <Text style={styles.hotelname}>Real Deal</Text>
                         <View style={styles.priceholder}>
                             <Text style={styles.price}>$16</Text>
-                            <Text  style={styles.per}>/per night</Text>
+                            <Text style={styles.per}>/per night</Text>
                         </View>
 
                         <Text>Sleeps 5 people</Text>
@@ -54,7 +55,14 @@ class SelectedHotelRoom extends React.Component {
                             margin={10}
                             textcolor={'white'}
                             parentWidth={'70%'} />
-                        <Text style={styles.roomdetails}>Room details</Text>
+                        <TouchableOpacity
+                            onPress={this.props.goaway}>
+                            <View style={styles.roomdetailsholder}>
+                                <Text style={styles.roomdetails}>Room details</Text>
+                                <Icon name='ios-arrow-down' size={20} />
+                            </View>
+                        </TouchableOpacity>
+
                     </View>
 
                 </View>
@@ -72,7 +80,7 @@ const styles = StyleSheet.create({
     cardfooter: {
         flexDirection: 'row',
         width: '100%',
-        marginTop:10
+        marginTop: 10
     },
     textcontainer: {
         flex: 1,
@@ -80,7 +88,7 @@ const styles = StyleSheet.create({
     },
     buttoncontainer: {
         flex: 1,
-        alignItems:'flex-end',
+        alignItems: 'flex-end',
         justifyContent: 'flex-start',
         marginRight: 30,
         marginTop: -0,
@@ -88,26 +96,30 @@ const styles = StyleSheet.create({
     hotelname: {
         fontWeight: 'bold',
         fontSize: 18,
-        color:'black'
+        color: 'black'
     },
     price: {
         fontWeight: 'bold',
         fontSize: 18,
-        color:'black'
+        color: 'black'
     },
     priceholder: {
         flexDirection: 'row',
         marginTop: 5,
-        marginBottom:5
+        marginBottom: 5
     },
     per: {
         marginTop: 3,
-        marginLeft:3
+        marginLeft: 3,
+        color: 'black'
     },
     roomdetails: {
         marginRight: 30,
         textAlign: "left"
 
+    },
+    roomdetailsholder: {
+        flexDirection: 'row'
     }
 })
 export default SelectedHotelRoom;

@@ -2,11 +2,13 @@ import React from 'react'
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const Roundcornerbutton = ({ parentWidth, title, colorr, margin, elevation, textcolor,iconColor,iconname, isicon, mLeft, mRight }) =>
+const Roundcornerbutton = ({ onPress, parentWidth, title, colorr, margin, elevation, textcolor,iconColor,iconname, isicon, mLeft, mRight }) =>
     (
         <View style={parentWidth ? {width:parentWidth}: {width:'100%'}}>
 
-            <TouchableOpacity style={styles.buttonStyle} style={{
+            <TouchableOpacity
+                onPress={onPress}
+                style={styles.buttonStyle} style={{
                 backgroundColor: colorr, padding: 15, borderRadius: 25,
                 marginTop: margin, marginBottom: margin, elevation: elevation,
                 marginLeft:mLeft, marginRight:mRight,

@@ -14,7 +14,7 @@ class SelectedHotel extends React.Component{
             <ScrollView>
                 {
                     this.state.name.map((item) => (
-                       <SelectedHotelRoom/>
+                        <SelectedHotelRoom goaway={() => this.props.navigation.navigate('SelectedHotelDetails')}/>
                     ))
                 }
             </ScrollView>

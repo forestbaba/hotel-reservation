@@ -1,17 +1,21 @@
 import React, { Component } from 'react'
-import { ImageBackground, StyleSheet,Text} from 'react-native'
+import { ImageBackground, StyleSheet, Text } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
-const ImageBackgroundCard = ({ imagecover, borderRadius, text}) =>
+const ImageBackgroundCard = ({ imagecover, borderRadius, text, onPress }) =>
     (
-        <ImageBackground source={imagecover} style={styles.placesCover} imageStyle={{ borderRadius: borderRadius }}>
-            <Text style={styles.text}>{text}</Text>
-        </ImageBackground>
+        <TouchableOpacity onPress={onPress}>
+            <ImageBackground source={imagecover} style={styles.placesCover} imageStyle={{ borderRadius: borderRadius }}
+              >
+                <Text style={styles.text}>{text}</Text>
+            </ImageBackground>
+        </TouchableOpacity>
     )
 
 
 
 const styles = StyleSheet.create({
-  
+
     placesCover: {
         // flex: 1,
         padding: 10,
@@ -26,9 +30,9 @@ const styles = StyleSheet.create({
     },
     text: {
         color: 'white',
-        elevation:2
+        elevation: 2
     }
 
-    
+
 })
 export default ImageBackgroundCard

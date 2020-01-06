@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native'
 import Roundedcornerimage from '../../components/imageview/roundedcorner.image'
 import profilepic from '../../../assets/travel.jpg'
 import Plainbuttonwithicon from '../../components/button/plainbutton.withicon'
@@ -12,7 +12,9 @@ class Profile extends React.Component {
                     <View style={styles.profiledetails}>
                         <View style={styles.container1}>
                             <Text style={styles.profilename}>James Wahahi</Text>
-                            <Text>View and edit profile</Text>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Editprofile')}>
+                                <Text>View and edit profile</Text>
+                            </TouchableOpacity>
                         </View>
                         <View>
                             <Roundedcornerimage src={profilepic} />
@@ -24,7 +26,7 @@ class Profile extends React.Component {
                     <Plainbuttonwithicon title={'Credits & Coupons'} name={'gift'} size={20} color={'gray'} />
                     <Plainbuttonwithicon title={'Help Center'} name={'question-circle'} size={20} color={'gray'} />
                     <Plainbuttonwithicon title={'Payments'} name={'credit-card'} size={20} color={'gray'} />
-                    <Plainbuttonwithicon title={'Settings'} name={'gear'} size={20} color={'gray'} />
+                    <Plainbuttonwithicon title={'Settings'} name={'gear'} size={20} color={'gray'} onPress={() => this.props.navigation.navigate('Settings')}/>
 
 
                 </View>
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-evenly',
         padding: 20,
-        paddingLeft:45,
+        paddingLeft: 45,
         marginBottom: 50,
     },
     container1: {

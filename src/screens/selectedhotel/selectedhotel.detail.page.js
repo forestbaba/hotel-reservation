@@ -46,6 +46,7 @@ class SelectedHotelDetail extends React.Component {
                         </View>
 
                     </View>
+                    
                     < View style={styles.divider} />
                     <View style={styles.summaryholder}>
                         <Text style={styles.summarytitle}>Summary</Text>

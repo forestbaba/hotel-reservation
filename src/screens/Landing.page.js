@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, ImageBackground } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Roundcornerbutton from '../components/button/Round.edge.button'
 import imagecover from '../../assets/travel.jpg'
@@ -10,34 +10,38 @@ import imagecover from '../../assets/travel.jpg'
 class LandingPage extends Component {
     render() {
         return (
-                <ImageBackground source={imagecover} style={styles.imageCover}>
-                    <View style={styles.iconcontainer}>
-                        <View style={styles.icon}>
+            <ImageBackground source={imagecover} style={styles.imageCover}>
+                <View style={styles.iconcontainer}>
+                    <View style={styles.icon}>
 
-                            <Icon
-                                name='home'
-                                size={45}
-                                color='#ffffff'
-                            />
+                        <Icon
+                            name='home'
+                            size={45}
+                            color='#ffffff'
+                        />
                         {/* <Icon name="toad" size={80} color="#bf1313" /> */}
-                        </View>
-
-                        <Text style={styles.room}>Roome</Text>
-                        <Text style={styles.hoteldesc}>Best Hotel deals for your holiday</Text>
                     </View>
 
-                    <View style={styles.loginBottom}>
-                        <View style={styles.loginButton}>
-                        <Roundcornerbutton title={'Get Started'} colorr={'#61cec7'}/>
-                        </View>
+                    <Text style={styles.room}>Roome</Text>
+                    <Text style={styles.hoteldesc}>Best Hotel deals for your holiday</Text>
+                </View>
 
-                        <View style={styles.loginPropmtText}>
-                            <Text style={styles.alreadyhaveaccount}>Already have an account? </Text>
+                <View style={styles.loginBottom}>
+                    <View style={styles.loginButton}>
+                        <Roundcornerbutton title={'Get Started'} colorr={'#61cec7'} textcolor={'#FFFFFF'}
+                            onPress={() => this.props.navigation.navigate('Carousel')}/>
+                    </View>
+
+                    <View style={styles.loginPropmtText}>
+                        <Text style={styles.alreadyhaveaccount}>Already have an account? </Text>
+                        <TouchableOpacity>
                             <Text style={styles.login}>Login </Text>
-                        </View>
-                    </View>
 
-                </ImageBackground>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+
+            </ImageBackground>
 
         )
     }
@@ -63,12 +67,12 @@ const styles = StyleSheet.create({
     room: {
         fontWeight: 'bold',
         fontSize: 50,
-        color:'#ffffff'
+        color: '#ffffff'
     },
     loginPropmtText: {
         flexDirection: "row",
         alignItems: 'center',
-        justifyContent:'center',
+        justifyContent: 'center',
         // width: '100%',
         marginTop: 30
     },
@@ -77,26 +81,28 @@ const styles = StyleSheet.create({
     },
     loginButton: {
         marginBottom: 20,
+        marginLeft: 50,
+        marginRight: 50
     },
     loginBottom: {
-        width:'90%'
+        width: '90%'
 
     },
     imageCover: {
         flex: 1,
         width: '100%',
-         alignItems: "center",
+        alignItems: "center",
         justifyContent: "space-around",
 
         resizeMode: 'cover',
     },
     alreadyhaveaccount: {
-        color:'white'
+        color: 'white'
     },
     login: {
         color: '#ffffff',
         fontWeight: 'bold',
-        marginLeft:5
+        marginLeft: 5
     }
 })
 export default LandingPage;

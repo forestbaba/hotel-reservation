@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-const Plainbuttonwithicon = ({ title, name, size, color }) =>
+const Plainbuttonwithicon = ({ onPress, title, name, size, color }) =>
     (
 
-        <TouchableOpacity style={styles.plainbutton}>
+        <TouchableOpacity
+            onPress={onPress}
+            style={styles.plainbutton}>
             <View style={styles.container}>
                 <Text style={styles.title}>{title}</Text>
                 <Icon name={name} size={size} color={color} style={styles.icon} />

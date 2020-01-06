@@ -2,7 +2,7 @@ import React from 'react'
 import { View, TouchableOpacity, Text, TextInput, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const Roundcornertextinput = ({ placeholder, colorr, margin, elevation, textcolor, isicon, iconname, iconcolor, margintop }) =>
+const Roundcornertextinput = ({ onPress, placeholder, colorr, margin, elevation, textcolor, isicon, iconname, iconcolor, margintop }) =>
     (
         <View style={styles.roundcornertextinput}>
             <TextInput
@@ -20,7 +20,9 @@ const Roundcornertextinput = ({ placeholder, colorr, margin, elevation, textcolo
                 }}>
             </TextInput>
             {
-                isicon ? <TouchableOpacity style={styles.iconbutton}>
+                isicon ? <TouchableOpacity
+                    onPress={onPress}
+                    style={styles.iconbutton}>
                     <Icon name={iconname} color={iconcolor} size={20} style={styles.icon} iconcolor={iconcolor} />
 
                 </TouchableOpacity> : null

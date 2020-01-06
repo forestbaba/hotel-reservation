@@ -10,20 +10,26 @@ import SelectedHotel from './src/screens/selectedhotel/selectedhotel.page'
 import ForgotPassword from './src/screens/forgotpassword/forgotpass.page'
 import Reviewspage from './src/screens/reviews/reviews.page'
 import SelectedHotelDetail from './src/screens/selectedhotel/selectedhotel.detail.page'
-const App =() => (
-  <View style={styles.container}>
-    {/* <CarouselPage/> */}
-    {/* <LandingPage/> */}
-    {/* <LoginPage/> */}
-    {/* <SingupPage/> */}
-    {/* <Explore/> */}
-    {/* <Profile/> */}
-    {/* <SelectedHotel/> */}
-    {/* <ForgotPassword/> */}
-    {/* <Reviewspage/> */}
-    <SelectedHotelDetail/>
-    </View>
-  );
+import MyTrips from './src/screens/mytrips/mytrips.page'
+import Screencontainer from './src/screens/container/screenContainer'
+
+const App = () => (<Screencontainer />
+)
+// <View style={styles.container}>
+//   {/* <CarouselPage/> */}
+//   {/* <LandingPage/> */}
+//   {/* <LoginPage/> */}
+//   {/* <SingupPage/> */}
+//   {/* <Explore/> */}
+//   {/* <Profile/> */}
+//   {/* <SelectedHotel/> */}
+//   {/* <ForgotPassword/> */}
+//   {/* <Reviewspage/> */}
+//   {/* <SelectedHotelDetail/> */}
+//   {/* <MyTrips/> */}
+//   <Screencontainer/>
+//   </View>
+// );
 
 const styles = StyleSheet.create({
   container: {
@@ -33,4 +39,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+console.disableYellowBox = true;
+
 export default App;

@@ -29,6 +29,14 @@ class ExplorePage extends Component {
                     url: 'https://images.unsplash.com/photo-1573337133361-5105f739deea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
                 },
             ],
+            hotels: [{ name: 'The red view', image: imagecover },
+            { name: 'Bail House', image: imagecover },
+            { name: 'Rendervouz one', image: imagecover },
+            { name: 'Greater all', image: imagecover },
+            { name: 'Ballistic notion', image: imagecover },
+            { name: 'The Radington stale', image: imagecover },
+            { name: 'Gee 11', image: imagecover }
+            ]
         };
     }
 
@@ -95,12 +103,14 @@ class ExplorePage extends Component {
                     <View style={styles.bottomcontainer}>
                         <Text style={styles.peopledestination}>Last Searches</Text>
                         <ScrollView horizontal>
+                            {
+                                this.state.hotels.map((items, key) => (
+                                    <ImageBackgroundCard imagecover={imagecover} borderRadius={15} text={'The right place to be'}
+                                        onPress={() => this.props.navigation.navigate('SelectedHotel')}/>
+                                ))
+                            }
 
-                            <ImageBackgroundCard imagecover={imagecover} borderRadius={15} text={'The right place to be'} />
-                            <ImageBackgroundCard imagecover={imagecover2} borderRadius={15} text={'The right place to be'} />
-                            <ImageBackgroundCard imagecover={imagecover} borderRadius={15} text={'The right place to be'} />
-                            <ImageBackgroundCard imagecover={imagecover2} borderRadius={15} text={'The right place to be'} />
-                            <ImageBackgroundCard imagecover={imagecover} borderRadius={15} text={'The right place to be'} />
+
 
                         </ScrollView>
 
@@ -115,6 +125,7 @@ class ExplorePage extends Component {
 const styles = StyleSheet.create({
     explore: {
         flex: 1,
+        marginBottom: 30
         // alignItems: 'flex-start',
         // flexDirection:'column'
 
